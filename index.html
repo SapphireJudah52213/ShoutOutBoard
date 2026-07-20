@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<style>
+			body, html {
+				background: #73C3B8; /*linear-gradient(100deg, #73C3B8, #93C3B8, #Bd6A3F, #Dd6A1F);*/
+				font-family: sans-serif;
+    				-ms-text-size-adjust: 100%;
+    				-webkit-text-size-adjust: 100%
+			}
+
+			.main {
+				display:block;
+				z-index:1;
+				background: #Dd6A1F;
+				position:absolute;
+				top: 165px;
+				height:2325px;
+				width:990px;
+				left:255px;
+				border-radius:10px;
+			}
+
+			.card {
+				display:block;
+				z-index:0;
+				background: black;
+				position:absolute;
+				top: 160px;
+				height:2335px;
+				width:1000px;
+				left:250px;
+				border-radius:10px;
+			}
+
+			.circles {
+				z-index:3;
+				position:absolute;
+				top:0px;
+			}
+
+			.Title {
+				font-family: 'Stencil', Georgia, serif;
+				font-size: 80px;
+				text-align: center;
+			}
+
+			.Reason {
+				font-family: sans-serif;
+    				-ms-text-size-adjust: 100%;
+    				-webkit-text-size-adjust: 100%;
+				font-weight: 700;
+				font-size: 50px;
+				text-align: center;
+			}
+
+			.Line {
+				background: black;
+				height: 5px;
+				width: 1005px;
+				left:250px;
+				position: absolute;
+				z-index:2;
+				top:160px;
+			}
+
+			.LineL {
+				background: black;
+				height: 2340px;
+				width: 5px;
+				left:250px;
+				position: absolute;
+				z-index:2;
+			}
+
+			.LineR {
+				background: black;
+				height: 2340px;
+				width: 5px;
+				left:1250px;
+				position: absolute;
+				z-index:2;
+			}
+
+			.BottomLine {
+				background: black;
+				height: 5px;
+				width: 1005px;
+				left:250px;
+				top:2500px;
+				position: absolute;
+				z-index:2;
+			}
+			
+			.Circle {
+				height: 100px;
+				width: 100px;
+				border-radius: 100%;
+				background: rgba(255, 255, 255,20%);
+				position: absolute;
+			}
+
+			.PicCircle1 {
+				height: 90px;
+				width: 90px;
+				border-radius: 100%;
+				background: rgba(0, 0, 0, 0);
+				position: relative;
+				left: 5px;
+				top: 5px;
+			}
+
+			.PicCircle2 {
+				height: 90px;
+				width: 90px;
+				border-radius: 100%;
+				background: #73C3B8;
+				position: relative;
+				left: 5px;
+				top: 5px;
+			}
+
+			.Name {
+			    font-size: 50px;
+			    position: absolute;
+			    width: 300px;
+			    text-align: center;
+			    transform: translateX(-50%);
+			    white-space: nowrap;
+			}
+
+			.description {
+				font-size: 20px;
+				position: absolute;
+				width: 100px;
+				text-align: center;
+				transform: translateX(-50%);
+				position: absolute;
+			}
+
+			@font-face {
+			  font-family: 'Stencil';
+			  src: url('fonts/STENCIL.ttf') format('truetype');
+			  font-weight: normal;
+			  font-style: normal;
+			  font-display: swap;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="Title">Shout Outs!</div>
+
+		<div class="Reason">Champions of Christ Leaderboard</div>
+		<div class="card"></div>
+		<!--<div class="Line"></div>
+		<div class="LineL"></div>
+		<div class="LineR"></div>
+		<div class="BottomLine"></div>-->
+		
+		<div class="main">
+		</div>
+
+		<div class="circles">
+
+			<div class="Circle" style="left: 400px; top: 200px;"><img class="PicCircle1" src="TannerTrephan.png"></img></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 320px;">Tanner</div>
+			<div class="Circle" style="left: 1000px; top: 200px;"><img class="PicCircle1" src="Christopher.svg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 320px;">Christopher</div>
+	
+			<div class="Circle" style="left: 400px; top: 420px;"><img class="PicCircle1" src="Darryl.png"></img></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 540px;">Darryl</div>
+			<div class="Circle" style="left: 1000px; top: 420px;"><img class="PicCircle1" src="Landan.svg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 540px;">Landan</div>
+	
+			<div class="Circle" style="left: 400px; top: 640px;"><img class="PicCircle1" src="London.png"></img></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 760px;">London</div>
+			<div class="Circle" style="left: 1000px; top: 640px;"><img class="PicCircle1" src="LEE.png"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 760px;">Lee</div>
+	
+			<div class="Circle" style="left: 400px; top: 880px;"><img class="PicCircle1" src="Judah.png"></img></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 980px;">Judah</div>
+			<div class="Circle" style="left: 1000px; top: 880px;"><img class="PicCircle1" src="Nancy.png"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 980px;">Nancy</div>
+	
+			<div class="Circle" style="left: 400px; top: 1100px;"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px;">NB</p></div></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 1220px;">Nora</div>
+			<div class="Circle" style="left: 1000px; top: 1100px;"><img class="PicCircle1" src="Bennet.svg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 1220px;">Bennet</div>
+	
+			<div class="Circle" style="left: 400px; top: 1340px;"><img class="PicCircle1" src="Lily.svg"></img></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 1460px;">Lilyanna</div>
+			<div class="Circle" style="left: 1000px; top: 1340px;"><img class="PicCircle1" src="Layla.svg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 1460px;">Layla</div>
+	
+			<div class="Circle" style="left: 400px; top: 1580px;"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px;">BS</p></div></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 1700px;">Brayden</div>
+			<div class="Circle" style="left: 1000px; top: 1580px;"><img class="PicCircle1" src="Jasai.jpg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 1700px;">Jasai</div>
+	
+			<div class="Circle" style="left: 1000px; top: 1820px;"><img class="PicCircle1" src="Sophia.svg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 1940px;">Sophia</div>
+			<div class="Circle" style="left: 400px; top: 1820px; z-index:3"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px; z-index:4">CU</p></div></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 1940px;">Christine</div>
+		
+			<div class="Circle" style="left: 400px; top: 2060px;"><img class="PicCircle1" src="Emily.jpg"></img></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 2180px;">Emily</div>
+			<div class="Circle" style="left: 1000px; top: 2060px;"><img class="PicCircle1" src="Grace.svg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 2180px;">Grace</div>
+	
+			<div class="Circle" style="left: 400px; top: 2300px;"><img class="PicCircle1" src="Ryder.svg"></img></div>
+			<div class="Name" id="Name1" style="left: 450px; top: 2420px;">Ryder</div>
+			<div class="Circle" style="left: 1000px; top: 2300px;"><img class="PicCircle1" src="Randy.svg"></img></div>
+			<div class="Name" id="Name2" style="left: 1050px; top: 2420px;">Randy</div>
+
+		</div>
+
+		<a href="https://summerbrookchurch.com/students"><div class="Circle" style="left: 710px; top: 2550px; border-radius:20px;"><img class="PicCircle1" style="border-radius:20px;" src="Summerbrook.jpg"></img></div></a>
+		<div style="position:relative;top:2500px;background:rgba(255,255,255,0);text-align:center;">Summerbrook Students</div>
+		<div style="position:relative;top:2510px;background:rgba(255,255,255,0);color:rgba(255,255,255,0);text-align:center;">Summerbrook Church</div>
+		
+		
+		<script>
+			const d = document;
+			const b = d.body;
+			const cl = console.log;
+			const cc = console.clear;
+			const params = new URLSearchParams(window.location.search);
+
+			const Description1 = params.get("dsc1");
+			const Description2 = params.get("dsc2");
+
+			document.getElementById("Name1").textContent = Person1;
+			document.getElementById("Name2").textContent = Person2;
+
+			
+			
+		</script>
+	</body>
+</html>
+
+<!--<div class="description" style="left: 1050px; top: 400px;">Description description description</div>-->
