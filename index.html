@@ -217,7 +217,7 @@
 	            <input type="password" id="password-input" placeholder="Enter password">
 	        </div>
 	        
-	        <button onclick="verifyPassword()" id="button">Submit</button>
+	        <button onclick="checkPassword()" id="button">Submit</button>
 	        <p id="error-text" class="error-message">Incorrect password. Please try again.</p>
 	    </div>
 		<div id="hidden" class="hidden">
@@ -303,16 +303,17 @@
 			const Description1 = params.get("dsc1");
 			const Description2 = params.get("dsc2");
 
-			document.getElementById("Name1").textContent = Person1;
-			document.getElementById("Name2").textContent = Person2;
+	          	  const userInput = document.getElementById('password-input');
+	          	  const gateBox = document.getElementById('login-gate');
+	          	  const hiddenContent = document.getElementsByClassName('hidden')[0];
+	          	  const errorText = document.getElementById('error-text');
 
 			list1 = [];
 
-			function verifyPassword() {
-	            const userInput = document.getElementById('password-input');
-	            const gateBox = document.getElementById('login-gate');
-	            const hiddenContent = document.getElementsByClassName('hidden')[0];
-	            const errorText = document.getElementById('error-text');
+	            	const correctPassword = "FpNohYjomhd";
+
+			//function verifyPassword() {
+
 	
 		    	const rows = [
     "qwertyuiop",
@@ -349,15 +350,17 @@ userInput.addEventListener('keydown', function(e) {
 });
 		
 			function checkPassword() {
-				if (list.join("") === correctPassword) {
-	                gateBox.style.display = 'none';         // Hide login gate
-	                hiddenContent.style.display = 'block';  // Show hidden block
+				if (list1.join("") === correctPassword) {
+	                		gateBox.style.display = 'none';         // Hide login gate
+	               			hiddenContent.style.display = 'block';  // Show hidden block
 					hiddenContent.classList.remove('hidden');
 			                errorText.style.display = 'none';       // Clear errors
 			            } else {
 			                errorText.style.display = 'block';      // Show error message
+					list1 = [];
+					userInput.value = "";
 			            }
-				    if (userInput === correctPassword) {
+				    if (list1.join("") === correctPassword) {
 		
 					    document.querySelectorAll("img[data-src]").forEach(img => {
 					        img.src = img.dataset.src;
@@ -370,7 +373,7 @@ userInput.addEventListener('keydown', function(e) {
 			    }
 				
 	            // Define your password here
-	            const correctPassword = "SiVufRgubfa";
+
 	
 	            
 			
