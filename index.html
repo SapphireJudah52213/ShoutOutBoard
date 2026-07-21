@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title></title>
+		<link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/5a1f5d28b1ffb6b886c06588/e87f766d-9f9c-4287-8b67-d0bee82fb0eb/favicon.ico?format=100w">
+		<title>Summerbrook Shout-Outs!</title>
 		<style>
+
+			:root {
+				--SummerbrookOrange:#Dd6A1F;
+			}
+			
 			body, html {
 				background: #73C3B8; /*linear-gradient(100deg, #73C3B8, #93C3B8, #Bd6A3F, #Dd6A1F);*/
 				font-family: sans-serif;
@@ -139,6 +145,12 @@
 				position: absolute;
 			}
 
+			.password-header {
+				font-family: sans-serif;
+    				-ms-text-size-adjust: 100%;
+    				-webkit-text-size-adjust: 100%;
+			}
+
 			.password-box {
 	            max-width: 400px;
 	            margin: 50px auto;
@@ -150,6 +162,17 @@
 	        .input-group {
 	            margin-bottom: 15px;
 	        }
+		
+		#password-input {
+			border-radius: 10px;
+			background: transparent;
+		}
+		
+		#button {
+			border-radius: 10px;
+			background: var(--SummerbrookOrange);
+		}
+		
 	        input[type="password"] {
 	            width: 100%;
 	            padding: 8px;
@@ -187,14 +210,14 @@
 	<body>
 
 		<div id="login-gate" class="password-box">
-	        <h2>Locked Content</h2>
+	        <h2 class="password-header">For the safety of our students, this site is restricted</h2>
 	        <p>Please enter the password.</p>
 	        
 	        <div class="input-group">
 	            <input type="password" id="password-input" placeholder="Enter password">
 	        </div>
 	        
-	        <button onclick="verifyPassword()">Unlock Content</button>
+	        <button onclick="verifyPassword()" id="button">Submit</button>
 	        <p id="error-text" class="error-message">Incorrect password. Please try again.</p>
 	    </div>
 		<div id="hidden" class="hidden">
@@ -283,34 +306,73 @@
 			document.getElementById("Name1").textContent = Person1;
 			document.getElementById("Name2").textContent = Person2;
 
+			list1 = [];
+
 			function verifyPassword() {
-	            const userInput = document.getElementById('password-input').value;
+	            const userInput = document.getElementById('password-input');
 	            const gateBox = document.getElementById('login-gate');
 	            const hiddenContent = document.getElementsByClassName('hidden')[0];
 	            const errorText = document.getElementById('error-text');
 	
-	            // Define your password here
-	            const correctPassword = "DoBigThings";
-	
-	            if (userInput === correctPassword) {
+		    	const rows = [
+    "qwertyuiop",
+    "asdfghjkl",
+    "zxcvbnm"
+];
+
+function shiftRight(key) {
+    const lower = key.toLowerCase();
+    for (const row of rows) {
+        const i = row.indexOf(lower);
+        if (i !== -1) {
+            let c = row[(i+1)%row.length];
+            if (key !== lower) c = c.toUpperCase();
+            return c;
+        }
+    }
+    if (key===" ") return " ";
+    return null;
+}
+
+userInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        checkPassword();
+        return;
+    }
+    if (e.key === 'Backspace') {
+        list1.pop();
+        return;
+    }
+    const s=shiftRight(e.key);
+    if(s!==null) list1.push(s);
+});
+		
+			function checkPassword() {
+				if (list.join("") === correctPassword) {
 	                gateBox.style.display = 'none';         // Hide login gate
 	                hiddenContent.style.display = 'block';  // Show hidden block
-			hiddenContent.classList.remove('hidden');
-	                errorText.style.display = 'none';       // Clear errors
-	            } else {
-	                errorText.style.display = 'block';      // Show error message
-	            }
-		    if (userInput === correctPassword) {
-
-    document.querySelectorAll("img[data-src]").forEach(img => {
-        img.src = img.dataset.src;
-    });
-
-    gateBox.style.display = "none";
-    hiddenContent.style.display = "block";
-    hiddenContent.classList.remove("hidden");
-}
-	        }
+					hiddenContent.classList.remove('hidden');
+			                errorText.style.display = 'none';       // Clear errors
+			            } else {
+			                errorText.style.display = 'block';      // Show error message
+			            }
+				    if (userInput === correctPassword) {
+		
+					    document.querySelectorAll("img[data-src]").forEach(img => {
+					        img.src = img.dataset.src;
+					    });
+					
+					    gateBox.style.display = "none";
+					    hiddenContent.style.display = "block";
+					    hiddenContent.classList.remove("hidden");
+					}
+			    }
+				
+	            // Define your password here
+	            const correctPassword = "SiVufRgubfa";
+	
+	            
 			
 		</script>
 	</body>
