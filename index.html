@@ -24,7 +24,8 @@
 				top: 165px;
 				height:2325px;
 				width:990px;
-				left:255px;
+				left:50%;
+				transform:translateX(-50%);
 				border-radius:10px;
 			}
 
@@ -36,7 +37,8 @@
 				top: 160px;
 				height:2335px;
 				width:1000px;
-				left:250px;
+				left:50%;
+				transform:translateX(-50%);
 				border-radius:10px;
 			}
 
@@ -44,6 +46,7 @@
 				z-index:3;
 				position:absolute;
 				top:0px;
+				left:50%;
 			}
 
 			.Title {
@@ -105,6 +108,44 @@
 				border-radius: 100%;
 				background: rgba(255, 255, 255,20%);
 				position: absolute;
+			}
+
+			.CircleL {
+				height: 100px;
+				width: 100px;
+				border-radius: 100%;
+				background: rgba(255, 255, 255,20%);
+				position: absolute;
+				left:-350px;
+			}
+
+			.CircleR {
+				height: 100px;
+				width: 100px;
+				border-radius: 100%;
+				background: rgba(255, 255, 255,20%);
+				position: absolute;
+				left: 200px;
+			}
+
+			#Name1 {
+				font-size: 50px;
+			    position: absolute;
+			    width: 300px;
+			    text-align: center;
+			    transform: translateX(-50%);
+			    white-space: nowrap;
+				left: -300px;
+			}
+
+			#Name2 {
+				font-size: 50px;
+			    position: absolute;
+			    width: 300px;
+			    text-align: center;
+			    transform: translateX(-50%);
+			    white-space: nowrap;
+				left: 250px;
 			}
 
 			.PicCircle1 {
@@ -234,56 +275,58 @@
 			</div>
 	
 			<div class="circles">
+
+				<!--style="left: 400px; top: 200px;"-->
 	
-				<div class="Circle" style="left: 400px; top: 200px;"><img class="PicCircle1" data-src="TannerTrephan.png"></img></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 320px;">Tanner</div>
-				<div class="Circle" style="left: 1000px; top: 200px;"><img class="PicCircle1" data-src="Christopher.svg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 320px;">Christopher</div>
+				<div class="CircleL" style="top: 200px"><img class="PicCircle1" data-src="TannerTrephan.png"></img></div>
+				<div class="NameL" id="Name1" style="top: 320px;">Tanner</div>
+				<div class="CircleR" style="top: 200px;"><img class="PicCircle1" data-src="Christopher.svg"></img></div>
+				<div class="NameR" id="Name2" style="top: 320px;">Christopher</div>
 		
-				<div class="Circle" style="left: 400px; top: 420px;"><img class="PicCircle1" data-src="Darryl.png"></img></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 540px;">Darryl</div>
-				<div class="Circle" style="left: 1000px; top: 420px;"><img class="PicCircle1" data-src="Landan.svg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 540px;">Landan</div>
+				<div class="CircleL" style="top: 420px;"><img class="PicCircle1" data-src="Darryl.png"></img></div>
+				<div class="Name" id="Name1" style="top: 540px;">Darryl</div>
+				<div class="CircleR" style="top: 420px;"><img class="PicCircle1" data-src="Landan.svg"></img></div>
+				<div class="Name" id="Name2" style="top: 540px;">Landan</div>
 		
-				<div class="Circle" style="left: 400px; top: 640px;"><img class="PicCircle1" data-src="London.png"></img></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 760px;">London</div>
-				<div class="Circle" style="left: 1000px; top: 640px;"><img class="PicCircle1" data-src="LEE.png"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 760px;">Lee</div>
+				<div class="CircleL" style="top: 640px;"><img class="PicCircle1" data-src="London.png"></img></div>
+				<div class="Name" id="Name1" style="top: 760px;">London</div>
+				<div class="CircleR" style="top: 640px;"><img class="PicCircle1" data-src="LEE.png"></img></div>
+				<div class="Name" id="Name2" style="top: 760px;">Lee</div>
 		
-				<div class="Circle" style="left: 400px; top: 880px;"><img class="PicCircle1" data-src="Judah.png"></img></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 980px;">Judah</div>
-				<div class="Circle" style="left: 1000px; top: 880px;"><img class="PicCircle1" data-src="Nancy.png"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 980px;">Nancy</div>
+				<div class="CircleL" style="top: 880px;"><img class="PicCircle1" data-src="Judah.png"></img></div>
+				<div class="Name" id="Name1" style="top: 980px;">Judah</div>
+				<div class="CircleR" style="top: 880px;"><img class="PicCircle1" data-src="Nancy.png"></img></div>
+				<div class="Name" id="Name2" style="top: 980px;">Nancy</div>
 		
-				<div class="Circle" style="left: 400px; top: 1100px;"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px;">NB</p></div></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 1220px;">Nora</div>
-				<div class="Circle" style="left: 1000px; top: 1100px;"><img class="PicCircle1" data-src="Bennet.svg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 1220px;">Bennet</div>
+				<div class="CircleL" style=" top: 1100px;"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px;">NB</p></div></div>
+				<div class="Name" id="Name1" style="top: 1220px;">Nora</div>
+				<div class="CircleR" style=" top: 1100px;"><img class="PicCircle1" data-src="Bennet.svg"></img></div>
+				<div class="Name" id="Name2" style="top: 1220px;">Bennet</div>
 		
-				<div class="Circle" style="left: 400px; top: 1340px;"><img class="PicCircle1" data-src="Lily.svg"></img></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 1460px;">Lilyanna</div>
-				<div class="Circle" style="left: 1000px; top: 1340px;"><img class="PicCircle1" data-src="Layla.svg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 1460px;">Layla</div>
+				<div class="CircleL" style=" top: 1340px;"><img class="PicCircle1" data-src="Lily.svg"></img></div>
+				<div class="Name" id="Name1" style="top: 1460px;">Lilyanna</div>
+				<div class="CircleR" style=" top: 1340px;"><img class="PicCircle1" data-src="Layla.svg"></img></div>
+				<div class="Name" id="Name2" style="top: 1460px;">Layla</div>
 		
-				<div class="Circle" style="left: 400px; top: 1580px;"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px;">BS</p></div></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 1700px;">Brayden</div>
-				<div class="Circle" style="left: 1000px; top: 1580px;"><img class="PicCircle1" data-src="Jasai.jpg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 1700px;">Jasai</div>
+				<div class="CircleL" style=" top: 1580px;"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px;">BS</p></div></div>
+				<div class="Name" id="Name1" style="top: 1700px;">Brayden</div>
+				<div class="CircleR" style=" top: 1580px;"><img class="PicCircle1" data-src="Jasai.jpg"></img></div>
+				<div class="Name" id="Name2" style="top: 1700px;">Jasai</div>
 		
-				<div class="Circle" style="left: 1000px; top: 1820px;"><img class="PicCircle1" data-src="Sophia.svg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 1940px;">Sophia</div>
-				<div class="Circle" style="left: 400px; top: 1820px; z-index:3"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px; z-index:4">CU</p></div></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 1940px;">Christine</div>
+				<div class="CircleR" style=" top: 1820px;"><img class="PicCircle1" data-src="Sophia.svg"></img></div>
+				<div class="Name" id="Name2" style="top: 1940px;">Sophia</div>
+				<div class="CircleL" style=" top: 1820px; z-index:3"><div class="PicCircle1" style="background:#73C3B87F; top:-25px;"><p style="font-size:30px; text-align:center;position:relative; top:25px; z-index:4">CU</p></div></div>
+				<div class="Name" id="Name1" style="top: 1940px;">Christine</div>
 			
-				<div class="Circle" style="left: 400px; top: 2060px;"><img class="PicCircle1" data-src="Emily.jpg"></img></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 2180px;">Emily</div>
-				<div class="Circle" style="left: 1000px; top: 2060px;"><img class="PicCircle1" data-src="Grace.svg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 2180px;">Grace</div>
+				<div class="CircleL" style=" top: 2060px;"><img class="PicCircle1" data-src="Emily.jpg"></img></div>
+				<div class="Name" id="Name1" style="top: 2180px;">Emily</div>
+				<div class="CircleR" style=" top: 2060px;"><img class="PicCircle1" data-src="Grace.svg"></img></div>
+				<div class="Name" id="Name2" style="top: 2180px;">Grace</div>
 		
-				<div class="Circle" style="left: 400px; top: 2300px;"><img class="PicCircle1" data-src="Ryder.svg"></img></div>
-				<div class="Name" id="Name1" style="left: 450px; top: 2420px;">Ryder</div>
-				<div class="Circle" style="left: 1000px; top: 2300px;"><img class="PicCircle1" data-src="Randy.svg"></img></div>
-				<div class="Name" id="Name2" style="left: 1050px; top: 2420px;">Randy</div>
+				<div class="CircleL" style=" top: 2300px;"><img class="PicCircle1" data-src="Ryder.svg"></img></div>
+				<div class="Name" id="Name1" style="top: 2420px;">Ryder</div>
+				<div class="CircleR" style=" top: 2300px;"><img class="PicCircle1" data-src="Randy.svg"></img></div>
+				<div class="Name" id="Name2" style="top: 2420px;">Randy</div>
 	
 			</div>
 	
@@ -309,6 +352,9 @@
 	          	  const errorText = document.getElementById('error-text');
 
 			list1 = [];
+			
+			//const mainCard = document.getElementsByClassName('main')[0];
+			//mainCard.style.left = ((parseInt(window.width) - parseInt(mainCard.style.width)) / 2) + "px";
 
 	            	const correctPassword = "FpNohYjomhd";
 
