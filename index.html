@@ -463,6 +463,14 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+document.addEventListener("click", ()=> {
+	let maxPairs = Math.min(pics.length, pics2.length);
+    let maxIndex = maxPairs * 2; // total alternating positions
+
+	currentIndex = (currentIndex + 1) % maxIndex;
+        spinElement(getElement(currentIndex));
+})
+
 
 
 
